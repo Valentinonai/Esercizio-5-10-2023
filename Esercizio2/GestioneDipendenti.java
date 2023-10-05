@@ -8,10 +8,10 @@ public class GestioneDipendenti {
     public static void main(String[] args) {
 
         Dipendente[] d=new Dipendente[4];
-        d[0] =new Dipendente(1,1000,20, Livello.OPERAIO, Dipartimento.PRODUZIONE);
-        d[1] =new Dipendente(2,1100,25, Livello.OPERAIO, Dipartimento.PRODUZIONE);
-        d[2] =new Dipendente(3,2000,30, Livello.IMPIEGATO, Dipartimento.AMMINISTRAZIONE);
-        d[3] =new Dipendente(4,3000,40, Livello.DIRIGENTE, Dipartimento.VENDITE);
+        d[0] =new Dipendente(1,1000,20, Livello.OPERAIO, Dipartimento.PRODUZIONE,"mario","rossi",24);
+        d[1] =new Dipendente(2,1100,25, Livello.OPERAIO, Dipartimento.PRODUZIONE,"pippo","verdi",62);
+        d[2] =new Dipendente(3,2000,30, Livello.IMPIEGATO, Dipartimento.AMMINISTRAZIONE,"pluto","gialli",42);
+        d[3] =new Dipendente(4,3000,40, Livello.DIRIGENTE, Dipartimento.VENDITE,"topolino","blu",28);
 
         d[0].promuovi();
         d[2].promuovi();

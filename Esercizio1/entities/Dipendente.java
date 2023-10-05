@@ -2,7 +2,7 @@ package Esercizio1.entities;
 
 import static Esercizio1.entities.Livello.*;
 
-public class Dipendente {
+public class Dipendente extends Persona implements Sportivi {
    public static double stipendioBase=1000;
    private int matricola;
    private double stipendio;
@@ -11,7 +11,8 @@ public class Dipendente {
    private Dipartimento dipartimento;
 
     //COSTRUTTORI
-    public Dipendente(int matricola,Dipartimento dipartimento){
+    public Dipendente(int matricola,Dipartimento dipartimento,String nome,String cognome,int age){
+        super(nome,cognome,age);
         this.matricola=matricola;
         this.dipartimento=dipartimento;
         this.stipendio= stipendioBase;
@@ -19,8 +20,9 @@ public class Dipendente {
         this.livello= OPERAIO;
 
     }
-    public Dipendente(int matricola,double stipendio,double importoOrarioStraordinario,Livello livello,Dipartimento dipartimento){
-      this.matricola=matricola;
+    public Dipendente(int matricola,double stipendio,double importoOrarioStraordinario,Livello livello,Dipartimento dipartimento,String nome,String cognome,int age){
+        super(nome,cognome,age);
+        this.matricola=matricola;
       this.livello=livello;
       this.dipartimento=dipartimento;
       this.importoOrarioStraordinario=importoOrarioStraordinario;
@@ -29,6 +31,9 @@ public class Dipendente {
 
     //METODI
 
+    public void presentazione(){
+        System.out.println("Ciao, io sono "+this.nome +" "+this.cognome+" e ho "+this.age+" anni"+" e sono un dipendente");
+    }
     public void print(){
         System.out.println("Matricola: "+this.matricola);
         System.out.println("Dipartimento: "+this.dipartimento);
@@ -93,5 +98,10 @@ public class Dipendente {
 
     public static double calcolaPaga(Dipendente d,int oreStraordinario){
         return d.stipendio+(d.importoOrarioStraordinario*oreStraordinario);
+    }
+
+
+    public void sportPraticato() {
+        System.out.println("Io sono un dipendente e non pratico sport");
     }
 }
