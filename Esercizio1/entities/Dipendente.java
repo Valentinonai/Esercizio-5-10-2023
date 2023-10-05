@@ -30,7 +30,7 @@ public class Dipendente extends Persona implements Sportivi {
     }
 
     //METODI
-
+    @Override
     public void presentazione(){
         System.out.println("Ciao, io sono "+this.nome +" "+this.cognome+" e ho "+this.age+" anni"+" e sono un dipendente");
     }
@@ -100,7 +100,7 @@ public class Dipendente extends Persona implements Sportivi {
         return d.stipendio+(d.importoOrarioStraordinario*oreStraordinario);
     }
 
-
+    @Override
     public void sportPraticato() {
         System.out.println("Io sono un dipendente e non pratico sport");
     }

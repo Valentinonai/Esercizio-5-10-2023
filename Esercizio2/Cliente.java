@@ -17,11 +17,12 @@ public class Cliente extends Persona implements Sportivi {
         this.puntiFedeltà=puntiFedeltà;
         this.sport=sport;
     }
-
+    @Override
     public void presentazione(){
         System.out.println("Ciao, io sono "+this.nome +" "+this.cognome+" e ho "+this.age+" anni"+" e sono un cliente");
     }
 
+    @Override
     public void sportPraticato(){
         System.out.println("Io sono un cliente e pratico "+ this.sport);
     }
