@@ -3,6 +3,7 @@ package Esercizio1;
 import Esercizio1.entities.Dipendente;
 import Esercizio1.entities.Livello;
 import Esercizio1.entities.Persona;
+import Esercizio1.entities.Sportivi;
 import Esercizio2.Cliente;
 
 import static Esercizio1.entities.Dipartimento.AMMINISTRAZIONE;
@@ -40,9 +41,14 @@ public class Main {
 
         System.out.println("------------------");
         Persona[] persone={d1,c1,d2};
+        Sportivi[] sportivi={d1,c1,d2};
 
         for(Persona p:persone){
             Persona.mansione(p);
+        }
+
+        for(Sportivi x:sportivi){
+            x.sportPraticato();
         }
 
     }
